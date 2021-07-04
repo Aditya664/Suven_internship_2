@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.container {
+  position: relative;
+  height: auto;
+}
+
+header {
+  height: 80px;
+}
+
+header,
+footer {
+  background: linear-gradient(-45deg, rgb(223, 245, 253), rgb(255, 240, 107), rgb(206, 255, 250), rgb(218, 165, 32));
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+  -moz-animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+header .bar {
+  width: fit-content;
+  height: 80px;
+  margin: -100px;
+  background: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+.navigation {
+  position: relative;
+  padding-bottom: 16px;
+  z-index: 2;
+  /* position: fixed; */
+}
+
+.navigation,
+.copyright {
+  overflow: hidden;
+}
+
+.navigation .logo {
+  width: 80px;
+  height: 50px;
+  float: left;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navigation .links,
+.copyright .links {
+  display: block;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+  margin: 16px 25px 0px 25px;
+  float: left;
+}
+
+.navigation .text {
+  margin: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold
+}
+
+.navigation a.text:hover,
+.copyright a.text:hover {
+  color: #3f3f3f;
+  border-bottom: none;
+  opacity: 0.5;
+}
+
+.navigation a.active,
+.copyright a:active {
+  color: white;
+  font-size: 20px;
+}
+
+/* .navigation input[type=text], .copyright input[type=text]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 6px;
+  margin-top: 0px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+} */
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.search-container {
+  float: right;
+  padding: 16px 0px 16px 16px;
+  margin: 0px 25px 0px 25px;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #b5bbfd;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.fa-search:before {
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+}
+
+.fa-search:active {
+  border: none;
+  outline: none;
+  border: 0;
+  outline: 0 !important;
+}
+
+.search-container-button button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 25px;
+  background: gold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  right: 38px;
+  margin-left: 0px;
+  margin-top: -40px;
+  margin-bottom: 0px;
+  position: absolute;
+  font-weight: bolder;
+}
+
+.search-container-button button {
+  border: 0px;
+  border-radius: 0px;
+  outline: none !important;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  vertical-align: middle;
+  width: 100%;
+  height: 526px;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 1350px;
+  position: relative;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.body-content {
+  margin: 40px;
+}
+
+.dropdown-container {
+  margin: 40px 0px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 5px 42px;
+  margin: 20px 5px 5px 45px;
+  width: 160px;
+  height: 38px;
+  background-color: gold;
+  font-weight: bolder;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 4px;
+}
+
+.fa {
+  float: right;
+}
+
+.navbar a:hover,
+.dropdown:hover #dropbtn,
+.dropbtn:focus {
+  background-color: rgba(255, 217, 0, 0.856);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 45px;
+  background-color: rgb(255, 217, 0)
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 2px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+#media-carousel-container {
+  margin: 10px 40px 40px 40px;
+}
+
+#media-holder-action,
+#media-holder-drama,
+#media-holder-scifi {
+  clear: both;
+}
+
+.popular-heading {
+  border-bottom: 1px solid #11121b;
+}
+
+#image-container-action,
+#image-container-drama,
+#image-container-scifi {
+  height: 250px;
+}
+
+.media-carousel,
+.media-carousel-movies {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 10px 5px;
+  float: left;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  text-align: center;
+}
+
+#no-results {
+  display: none;
+  text-align: center;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: -160px;
+}
+
+footer {
+  position: relative;
+  margin-top: 83% !important;
+  height: 76px;
+}
+
+.copyright {
+  position: absolute;
+  padding: 2px 0px 20px 0px;
+  z-index: 2;
+  width: 622px;
+}
+
+.copyright .links {
+  margin-left: 25px;
+}
+
+.copyright .text {
+  margin-top: 28px;
+  color: rgb(63, 63, 63);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.copyright .logo {
+  width: 62px;
+  height: 40px;
+  float: left;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form {
+  float: right;
+}
+
+input.input-medium.search-query {
+  margin-top: -44px;
+  height: 40px;
+  margin-right: 55px;
+  ;
+  border: rgb(24, 23, 21);
+  border-radius: 4px;
+  border-style: double;
+  width: 1059px;
+  position: relative;
+  background-color: gold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(90, 89, 89, 0.904);
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1 !important;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover{
+     background-color: gold;
+}
+
+.dropdown:hover .dropdown-content {display: block;}

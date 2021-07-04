@@ -1,0 +1,410 @@
+<html>
+
+<head>
+    <title>365 Entertainment Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imgs/365ep.jpg" type="image/png" sizes="16x20">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/365ep1.css">
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header>
+
+        <div class="navigation">
+
+          <a class="links" href="index.html"><img class="logo" src="imgs/365ep.jpg" alt="365 Entertainment Portal"></a>
+          <a class="links text" href="#">Movies</a>
+          <a class="links text" href="#tv_series">TV Series</a>
+          <a class="links text" href="#audio">Audio</a>
+
+
+        </div>
+
+        <div class="bar"></div>
+
+      </header>
+
+      <div class="content">
+
+        <div class="head-content">
+
+          <div class="slideshow-container">
+            <div class="slides" style="display: block;">
+              <img src="mov_imgs/abc1.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides" style="display: none;">
+              <img src="mov_imgs/abc2.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides" style="display: none;">
+              <img src="mov_imgs/abc3.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides" style="display: none;">
+              <img src="mov_imgs/abc4.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides" style="display: none;">
+              <img src="mov_imgs/abc5.jpg" alt="hero carousel">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+            <a class="next" onclick="plusSlides(1, 0)">❯</a>
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+          <button class="dropbtn"><span id="genreText">Genre</span><i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a onclick="getMediaPosters(this.text)">All</a>
+            <a onclick="getMediaPosters(this.text)">Action</a>
+            <a onclick="getMediaPosters(this.text)">Drama</a>
+            <a onclick="getMediaPosters(this.text)">Sci-Fi</a>
+          </div>
+
+        </div>
+
+
+        <div class="search-container">
+          <form onsubmit="javascript:return false;">
+            <input type="text" class="input-medium search-query" placeholder="Search your favourite movie title" name="search" oninput="updateResults()">
+
+            <div class="search-container-button">
+              <button type="submit" onclick="updateResults()"><i class="fa fa-search"></i></button>
+            </div>
+
+          </form>
+        </div>
+
+        <div id="media-carousel-container">
+
+
+          <div id="media-holder-action">
+
+            <div id="image-container-action">
+              <div class="movies-action">
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano1.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Haider</b><br>Indian crime tragedy film.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano2.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Dream 2</b><br>Thriller, Mystery &amp; Comedy </div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano3.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Batman</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano4.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Monster Manav</b><br>Japanese manga series written by Tsugumi.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano5.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Kill Bill</b><br>2003 American martial arts film.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano6.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Rowdy</b><br>Indian action drama film.</div>
+                </div>
+              </div>
+
+              <div class="movies-drama">
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano7.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Agnipaath</b><br>Indian crime tragedy film.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano8.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Ankhein</b><br>Thriller, Mystery &amp; Comedy .</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano9.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Guide</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano10.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Deewar</b><br>2016 ‧ Fantasy/Science Fiction.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano11.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Sholay</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano12.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">K3G</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano13.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Shaurya</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano14.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Cheeni Kam</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano15.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Ishq Vishq</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano16.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Padmaavat</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano17.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Kai Po Che</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano18.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Raabta</b><br>A Marvel Comics superhero team.</div>
+                </div>
+              </div>
+
+              <div class="movies-scifi">
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano19.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Interstellar</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano20.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Star Wars</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano21.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Thor</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano22.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Captain America</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano23.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">X-Men</b><br>A Marvel Comics superhero team.</div>
+                </div>
+
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano24.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Black Widow</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano25.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Iron-Man</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano26.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Hulk</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano27.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Captain Marvel</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano28.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Wonder Woman</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano29.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Batwoman</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano30.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Batman</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano31.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Superman</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano32.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Superwoman</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano33.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Doctor Strange</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano34.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Mars</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano35.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Gravity</b><br>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="mov_imgs/nano36.jpg" alt="media carousel" width="200" height="200">
+                  <div class="overlay"><b class="movie-title">Martian</b><br>A Marvel Comics superhero team.</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--<div id="no-results">No Results Found.</div>--> 
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+
+      <div class="copyright">
+        <a class="links" href="index.html"><img class="logo" src="imgs/365ep.jpg" alt="365 Entertainment Portal"></a>
+        <div class="text">Powered by 365 Entertainment Portal 2019. All Rights Reserved.</div>
+      </div>
+
+    </footer>
+
+
+
+
+
+    <!-- <script>
+        
+        var movieTitle;    
+        var currentGenre = "Genre";
+        var slideIndex = [1,1];
+                        showSlides(1, 0);
+                
+                        function plusSlides(n, no) {
+                                showSlides(slideIndex[no] += n, no);
+                        }
+                
+                        function showSlides(n, no) {                        
+                                var x = document.getElementsByClassName("slides");
+
+                                if (n > x.length) {slideIndex[no] = 1}    
+                                
+                                if (n < 1) {slideIndex[no] = x.length}
+                                
+                                for (var i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                }
+                                
+                                x[slideIndex[no]-1].style.display = "block";  
+                        }
+        
+        function showNoResultsText(totalcount){
+                
+                if(totalcount == 0){
+                        document.getElementById("no-results").style.display="block";
+                        console.log('totalcount in showNoResultsText' + totalcount);
+                }
+                else    {
+                        document.getElementById("no-results").style.display="none";
+                }
+                
+        }
+
+
+                function updateResults() {
+                var query = document.getElementsByClassName('search-query')[0].value.trim().toLowerCase(); 
+                var counter = 0;                                                           
+
+                if(currentGenre == 'All'|| currentGenre == 'Genre'){
+                        movieTitle = document.getElementsByClassName('movie-title');
+                }
+                if(currentGenre == 'Action'){
+                        movieTitle = document.getElementsByClassName('movies-action')[0].getElementsByClassName('movie-title');
+                }
+                if(currentGenre == 'Drama'){
+                        movieTitle = document.getElementsByClassName('movies-drama')[0].getElementsByClassName('movie-title');                                
+                }
+                if(currentGenre == 'Sci-Fi'){
+                        movieTitle = document.getElementsByClassName('movies-scifi')[0].getElementsByClassName('movie-title');                        
+                }
+
+
+                for(var name=0; name< movieTitle.length; name++){
+                    var compareMovieTitles = movieTitle[name].innerHTML.toLowerCase();
+                
+                        if(compareMovieTitles.indexOf(query) === -1){
+                                movieTitle[name].closest('div.media-carousel-movies').style.display="none";                                                        
+                        }
+                        else {
+                                movieTitle[name].closest('div.media-carousel-movies').style.display="block";
+                                counter++;
+                        }                    
+                }
+
+                showNoResultsText(counter);                
+        }
+
+                /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                function toggleGenreList() {
+                        document.getElementById("dropdown-content").classList.toggle("show");                        
+                }
+
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(e) {
+                        
+                        if (!e.target.matches('#dropbtn')) {                
+
+                                var dropdownContent = document.getElementById("dropdown-content");
+                        
+                                if (dropdownContent.classList.contains('show')) {
+                                        dropdownContent.classList.remove('show');
+                                }
+                        }
+                }
+
+                function getMediaPosters(selectedGenre){
+                        var countMovies = 0; 
+                        var mediaCarouselMovies;            
+                        currentGenre = selectedGenre;                                              
+                        document.getElementById("genreText").innerHTML = selectedGenre;
+
+                        if(selectedGenre == 'All'){
+                            document.getElementsByClassName('movies-action')[0].style.display="block";    
+                            document.getElementsByClassName('movies-action')[0].style.display="block";
+                            document.getElementsByClassName('movies-drama')[0].style.display="block";
+                            document.getElementsByClassName('movies-scifi')[0].style.display="block";  
+                            mediaCarouselMovies = document.getElementsByClassName("media-carousel-movies");                             
+                        }
+                        if(selectedGenre == 'Action'){
+                            document.getElementsByClassName('movies-action')[0].style.display="block";
+                            document.getElementsByClassName('movies-drama')[0].style.display="none";
+                            document.getElementsByClassName('movies-scifi')[0].style.display="none";
+                            mediaCarouselMovies = document.getElementsByClassName('movies-action')[0].getElementsByClassName("media-carousel-movies");                           
+                        }
+                        if(selectedGenre == 'Drama'){
+                            document.getElementsByClassName('movies-action')[0].style.display="none";
+                            document.getElementsByClassName('movies-drama')[0].style.display="block";                            
+                            document.getElementsByClassName('movies-scifi')[0].style.display="none"; 
+                            mediaCarouselMovies = document.getElementsByClassName('movies-drama')[0].getElementsByClassName("media-carousel-movies");                               
+                        }
+                        if(selectedGenre == 'Sci-Fi'){
+                            document.getElementsByClassName('movies-action')[0].style.display="none";
+                            document.getElementsByClassName('movies-drama')[0].style.display="none";
+                            document.getElementsByClassName('movies-scifi')[0].style.display="block";
+                            mediaCarouselMovies = document.getElementsByClassName('movies-scifi')[0].getElementsByClassName("media-carousel-movies");
+                        }                        
+
+                        
+                                var mediaCarouselMoviesCount = mediaCarouselMovies.length;
+                                
+                                for(var count = 0; count<mediaCarouselMoviesCount; count++){
+                                        if(mediaCarouselMovies[count].style.display == "block")
+                                                countMovies++;
+                                }
+                                console.log(countMovies);                                
+                        
+                                showNoResultsText(countMovies);
+                }
+        
+        </script> -->
+    <script type="text/javascript" src="js/main.js"></script>
+  
+
+
+</body></html>
